@@ -1,11 +1,13 @@
 <div class="container ">
 <p>lista de nombres</p>
-<button type="button" class="btn btn-info" (click)="mostrarlista()">mostrar</button>
+<br>
+<button type="button" class="boton" (click)="mostrarlista()">mostrar nombres</button><br>
 <hr>
-
+<div class="lista">
 <ul *ngIf="mostrardatos">
     <li  *ngFor="let user of users">
       {{user.name|json}}
     </li>
 </ul>
+</div>
 </div>
