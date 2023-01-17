@@ -1,1 +1,11 @@
-<p>home works!</p>
+<div class="container ">
+<p>lista de nombres</p>
+<button type="button" class="btn btn-info" (click)="mostrarlista()">mostrar</button>
+<hr>
+
+<ul *ngIf="mostrardatos">
+    <li  *ngFor="let user of users">
+      {{user.name|json}}
+    </li>
+</ul>
+</div>

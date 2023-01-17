@@ -1,9 +1,18 @@
-import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Injectable ,OnInit} from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
-export class UsuarioService {
+export class UsuarioService implements OnInit{
 
-  constructor() { }
+url="https://jsonplaceholder.typicode.com/users"
+
+  constructor(private http:HttpClient) { }
+  ngOnInit(): void {
+    
+  }
+  getmostrar(){
+    return this.http.get<any>(this.url);
+  }
 }
